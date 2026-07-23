@@ -47,6 +47,7 @@
     .meta { color: var(--muted); font-size: 0.95rem; margin: 0; }
     nav {
       display: flex;
+      flex-wrap: wrap;
       gap: 1rem;
       margin-top: 1.25rem;
       font-family: "Avenir Next", "Segoe UI", sans-serif;
@@ -74,6 +75,19 @@
       margin: 1.75rem 0 0.6rem;
     }
     p { margin: 0 0 0.75rem; color: #3a372f; }
+    .cta {
+      display: inline-block;
+      margin: 0.5rem 0 1rem;
+      padding: 0.7rem 1.1rem;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-family: "Avenir Next", "Segoe UI", sans-serif;
+      font-size: 0.95rem;
+    }
+    ul { margin: 0 0 1rem; padding-left: 1.2rem; color: #3a372f; }
+    li { margin: 0.35rem 0; }
     footer {
       max-width: 42rem;
       margin: 0 auto 3rem;
@@ -94,13 +108,15 @@
       <a href="index.html">首頁</a>
       <a href="privacy.html" aria-current="page">隱私政策</a>
       <a href="terms.html">服務條款</a>
+      <a href="delete-account.html">刪除帳號</a>
     </nav>
   </header>
   <main>
 
     <section>
-      <h2>1. 適用範圍</h2>
+      <h2>1. 適用範圍與開發者</h2>
       <p>本政策說明《昨日衣櫥》（英文名稱 Yestora，以下稱「本服務」）如何蒐集、使用、儲存與分享與你相關的資訊。使用本服務即表示你理解本政策內容。</p>
+<p>本服務由 Yestora（昨日衣櫥）開發與營運，隱私相關聯絡信箱：yestora.app@gmail.com。</p>
 <p>若本政策與應用程式商店或登入／付款供應商之條款有所不同，就該供應商處理之部分，以其條款為準。</p>
     </section>
 
@@ -120,15 +136,17 @@
       <p>提供登入驗證、衣櫥管理、穿搭建議、天氣顯示、AI 美化、訂閱／加購權益驗證與客戶支援。</p>
 <p>維護服務安全、排除故障並改善使用體驗。</p>
 <p>在法律要求、執行條款或保護使用者與公眾權益的必要情況下處理資料。</p>
+<p>我們不會出售你的個人資料。本服務也不會將你的個人資料出售給第三方以換取金錢對價。</p>
     </section>
 
     <section>
-      <h2>4. 資料儲存與保存期間</h2>
+      <h2>4. 資料儲存、安全與保存期間</h2>
       <p>你的衣櫥資料（含照片）主要以儲存於你的裝置本機為原則，以便離線或日常使用；本服務目前不提供自動雲端同步備份。</p>
 <p>請定期使用應用程式內的「匯出衣櫥備份」自行保存副本。刪除 App、換機或清除資料前，請先完成備份。</p>
 <p>若你使用需連線的功能（例如登入驗證、天氣查詢、訂閱狀態同步或 AI），相關請求可能經由我們的伺服器或第三方處理，且僅限提供該功能所需範圍。</p>
+<p>安全傳輸：當資料在裝置與我們的伺服器或必要第三方之間傳輸時，我們使用加密連線（HTTPS／TLS）保護傳輸中的資料。</p>
 <p>經我們伺服器暫存或處理之請求資料，原則上僅於完成功能、除錯、資安與法律義務所需期間內保存，不會作為無關目的之長期檔案庫。</p>
-<p>我們採取合理措施保護經手之資料，但無法保證絕對安全，亦不保證本機資料永不遺失。</p>
+<p>我們採取合理技術與管理措施保護經手之資料，但無法保證絕對安全，亦不保證本機資料永不遺失。</p>
     </section>
 
     <section>
@@ -153,10 +171,14 @@
     </section>
 
     <section>
-      <h2>8. 你的權利</h2>
-      <p>你可在 App 內檢視或編輯衣櫥與個人設定；亦可要求查閱、更正或刪除我們所持有之個人資料（本機資料請於裝置上直接刪除或解除安裝 App）。</p>
-<p>登出或刪除帳號相關資料後，我們將依合理方式處理伺服器端可識別資訊；第三方（如 Google、Apple、RevenueCat）所持資料需依其流程另行管理。</p>
-<p>若需協助，請透過應用程式內的「客服信箱」聯繫我們（yestora.app@gmail.com）。</p>
+      <h2>8. 你的權利與帳號刪除</h2>
+      <p>你可在 App 內檢視或編輯衣櫥與個人設定；亦可要求查閱、更正或刪除我們所持有之個人資料（本機資料可於裝置上直接刪除或解除安裝 App）。</p>
+<p>帳號刪除（App 內）：請至「個人設定」選擇「刪除帳號與所有資料」。此操作會清除本機衣櫥、偏好設定與登入狀態。</p>
+<p>帳號刪除（網頁）：若你無法使用 App，可前往我們的公開刪除說明頁提出申請：<a href="https://redlin22881124.github.io/yestora-legal/delete-account.html">https://redlin22881124.github.io/yestora-legal/delete-account.html</a> ，或寄信至 yestora.app@gmail.com（主旨請註明「刪除帳號」並提供登入使用的電子郵件）。</p>
+<p>刪除後我們會處理的內容：我們會依合理方式刪除或去識別化伺服器端與你的帳號相關、可由我們控制之資料（例如登入／權益狀態相關紀錄），不會僅凍結帳號了事。</p>
+<p>刪除後可能仍短期保留的情形：為履行法律義務、處理爭議、防詐欺或資安調查，我們可能在必要範圍內短期保留部分紀錄（例如交易／權益稽核相關資訊）；保留期間結束後將刪除或去識別化。本機衣櫥照片若僅存在你的裝置上，需由你於 App 內刪除帳號、清除 App 資料或解除安裝以移除。</p>
+<p>第三方（如 Google、Apple、RevenueCat）所持資料，需依其各自流程另行管理或申請刪除；商店訂閱請至 Google Play／App Store 帳戶頁面取消。</p>
+<p>若需協助，請透過應用程式內的「客服信箱」或上述信箱聯繫我們（yestora.app@gmail.com）。</p>
     </section>
 
     <section>
@@ -167,10 +189,13 @@
 
     <section>
       <h2>10. 聯絡方式</h2>
-      <p>隱私相關問題請寄至：yestora.app@gmail.com。</p>
+      <p>開發者／營運：Yestora（昨日衣櫥）。</p>
+<p>隱私相關問題請寄至：yestora.app@gmail.com。</p>
+<p>帳號刪除說明頁：<a href="https://redlin22881124.github.io/yestora-legal/delete-account.html">https://redlin22881124.github.io/yestora-legal/delete-account.html</a></p>
     </section>
   </main>
   <footer>
+    開發者：Yestora（昨日衣櫥） ·
     聯絡：<a href="mailto:yestora.app@gmail.com">yestora.app@gmail.com</a>
   </footer>
 </body>
