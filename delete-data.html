@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>刪除資料｜昨日衣櫥</title>
   <meta name="description" content="昨日衣櫥 — 刪除資料" />
+  <link rel="alternate" hreflang="zh-Hant" href="delete-data.html" />
+  <link rel="alternate" hreflang="zh-Hans" href="delete-data.zh-Hans.html" />
+  <link rel="alternate" hreflang="en" href="delete-data.en.html" />
   <style>
     :root {
       --ink: #2c2a26;
@@ -18,7 +21,7 @@
     body {
       margin: 0;
       font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Songti TC",
-        "Noto Serif TC", serif;
+        "Noto Serif SC", "Noto Serif TC", serif;
       color: var(--ink);
       background:
         radial-gradient(1200px 600px at 10% -10%, #e7ebe0 0%, transparent 55%),
@@ -45,7 +48,7 @@
       font-weight: 600;
     }
     .meta { color: var(--muted); font-size: 0.95rem; margin: 0; }
-    nav {
+    nav, .langs {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
@@ -53,12 +56,18 @@
       font-family: "Avenir Next", "Segoe UI", sans-serif;
       font-size: 0.95rem;
     }
-    nav a {
+    .langs {
+      margin-top: 0.85rem;
+      font-size: 0.85rem;
+      gap: 0.85rem;
+    }
+    nav a, .langs a {
       color: var(--ink);
       text-decoration: none;
       border-bottom: 1px solid transparent;
     }
-    nav a:hover, nav a[aria-current="page"] {
+    nav a:hover, nav a[aria-current="page"],
+    .langs a:hover, .langs a[aria-current="page"] {
       border-bottom-color: var(--accent);
       color: var(--accent);
     }
@@ -86,7 +95,7 @@
       font-family: "Avenir Next", "Segoe UI", sans-serif;
       font-size: 0.95rem;
     }
-    ul { margin: 0 0 1rem; padding-left: 1.2rem; color: #3a372f; }
+    ul, ol { margin: 0 0 1rem; padding-left: 1.2rem; color: #3a372f; }
     li { margin: 0.35rem 0; }
     footer {
       max-width: 42rem;
@@ -111,6 +120,11 @@
       <a href="delete-data.html" aria-current="page">刪除資料</a>
       <a href="delete-account.html">刪除帳號</a>
     </nav>
+    <nav class="langs" aria-label="Language">
+      <a href="delete-data.html" hreflang="zh-Hant" aria-current="page">繁中</a>
+      <a href="delete-data.zh-Hans.html" hreflang="zh-Hans">简体</a>
+      <a href="delete-data.en.html" hreflang="en">English</a>
+    </nav>
   </header>
   <main>
 
@@ -119,31 +133,34 @@
       <p>本頁說明如何在<strong>保留帳號</strong>的情況下，刪除全部或部分資料。開發者／營運：Emma Kao（品牌／App：昨日衣櫥 Yestora）（品牌／App：昨日衣櫥 Yestora）。</p>
       <p>若要一併刪除帳號與所有資料，請改用 <a href="delete-account.html">刪除帳號</a> 說明頁。</p>
     </section>
+
     <section>
       <h2>方式一：在 App 內自行刪除（建議）</h2>
+      <p>此方式由你即時掌控，適合刪除特定單品、穿搭或照片。</p>
       <ol>
         <li>開啟《昨日衣櫥》並登入。</li>
         <li>刪除<strong>部分資料</strong>：在「衣櫥」或「搭配」中開啟單品／穿搭，使用刪除功能移除不想保留的內容與照片。</li>
         <li>可重複上述步驟，直到只留下你想保留的資料；帳號登入狀態不受影響。</li>
       </ol>
-      <p>此方式由你即時掌控，適合刪除特定單品、穿搭或照片。</p>
     </section>
+
     <section>
       <h2>方式二：以電子郵件申請（App 外）</h2>
       <p>若你無法使用 App，或想申請刪除可由我們控制之伺服器端資料但<strong>保留帳號</strong>，請寄信申請。請使用與登入帳號相同的電子郵件，主旨註明「刪除資料」。</p>
-      <p><a class="cta" href="mailto:yestora.app@gmail.com?subject=%E5%88%AA%E9%99%A4%E8%B3%87%E6%96%99%E7%94%B3%E8%AB%8B%EF%BD%9C%E6%98%A8%E6%97%A5%E8%A1%A3%E6%AB%A5&body=%E8%AB%8B%E5%A1%AB%E5%AF%AB%E4%BB%A5%E4%B8%8B%E8%B3%87%E8%A8%8A%EF%BC%9A%0A%0A1.%20%E7%99%BB%E5%85%A5%E4%BD%BF%E7%94%A8%E7%9A%84%E9%9B%BB%E5%AD%90%E9%83%B5%E4%BB%B6%EF%BC%9A%0A2.%20%E7%99%BB%E5%85%A5%E6%96%B9%E5%BC%8F%EF%BC%88Google%EF%BC%8FApple%EF%BC%89%EF%BC%9A%0A3.%20%E6%83%B3%E5%88%AA%E9%99%A4%E7%9A%84%E8%B3%87%E6%96%99%E7%AF%84%E5%9C%8D%EF%BC%88%E4%BE%8B%E5%A6%82%EF%BC%9A%E7%89%B9%E5%AE%9A%E8%A1%A3%E6%AB%A5%E5%96%AE%E5%93%81%EF%BC%8F%E5%85%A8%E9%83%A8%E8%A1%A3%E6%AB%A5%E8%B3%87%E6%96%99%EF%BC%8F%E4%BD%BF%E7%94%A8%E7%B4%80%E9%8C%84%EF%BC%89%EF%BC%9A%0A4.%20%E7%A2%BA%E8%AA%8D%E4%BF%9D%E7%95%99%E5%B8%B3%E8%99%9F%E3%80%81%E5%83%85%E5%88%AA%E9%99%A4%E8%B3%87%E6%96%99%EF%BC%9A%E6%98%AF%0A%0A%E9%80%81%E5%87%BA%E5%BE%8C%E6%88%91%E5%80%91%E6%9C%83%E4%BE%9D%E9%9A%B1%E7%A7%81%E6%94%BF%E7%AD%96%E8%99%95%E7%90%86%E3%80%82">寄信申請刪除資料</a></p>
-      <p>或手動寄至：<a href="mailto:yestora.app@gmail.com">yestora.app@gmail.com</a></p>
+      <p><a class="cta" href="mailto:yestora.app@gmail.com?subject=%E5%88%AA%E9%99%A4%E8%B3%87%E6%96%99%E7%94%B3%E8%AB%8B%EF%BD%9C%E6%98%A8%E6%97%A5%E8%A1%A3%E6%AB%A5&amp;body=%E8%AB%8B%E5%A1%AB%E5%AF%AB%E4%BB%A5%E4%B8%8B%E8%B3%87%E8%A8%8A%EF%BC%9A%0A%0A1.%20%E7%99%BB%E5%85%A5%E4%BD%BF%E7%94%A8%E7%9A%84%E9%9B%BB%E5%AD%90%E9%83%B5%E4%BB%B6%EF%BC%9A%0A2.%20%E7%99%BB%E5%85%A5%E6%96%B9%E5%BC%8F%EF%BC%88Google%EF%BC%8FApple%EF%BC%89%EF%BC%9A%0A3.%20%E6%83%B3%E5%88%AA%E9%99%A4%E7%9A%84%E8%B3%87%E6%96%99%E7%AF%84%E5%9C%8D%EF%BC%88%E4%BE%8B%E5%A6%82%EF%BC%9A%E7%89%B9%E5%AE%9A%E8%A1%A3%E6%AB%A5%E5%96%AE%E5%93%81%EF%BC%8F%E5%85%A8%E9%83%A8%E8%A1%A3%E6%AB%A5%E8%B3%87%E6%96%99%EF%BC%8F%E4%BD%BF%E7%94%A8%E7%B4%80%E9%8C%84%EF%BC%89%EF%BC%9A%0A4.%20%E7%A2%BA%E8%AA%8D%E4%BF%9D%E7%95%99%E5%B8%B3%E8%99%9F%E3%80%81%E5%83%85%E5%88%AA%E9%99%A4%E8%B3%87%E6%96%99%EF%BC%9A%E6%98%AF%0A%0A%E9%80%81%E5%87%BA%E5%BE%8C%E6%88%91%E5%80%91%E6%9C%83%E4%BE%9D%E9%9A%B1%E7%A7%81%E6%94%BF%E7%AD%96%E8%99%95%E7%90%86%E3%80%82">寄信申請刪除資料</a></p>
+      <p>或手動寄至： <a href="mailto:yestora.app@gmail.com">yestora.app@gmail.com</a></p>
       <p>信件請包含：登入電子郵件、登入方式（Google／Apple）、欲刪除的資料範圍，以及確認「保留帳號、僅刪除資料」。</p>
     </section>
+
     <section>
       <h2>刪除或保留的資料類型</h2>
+      <p>完整說明請見 <a href="privacy.html">隱私政策</a>。</p>
       <ul>
         <li><strong>可刪除（部分或全部）</strong>：你建立的衣櫥單品、穿搭組合、相關本機照片與偏好設定中可由你編輯／移除的內容；以及我們伺服器端與該請求相關、可由我們控制之使用紀錄（若有）。</li>
         <li><strong>帳號本身</strong>：依本頁申請時不會刪除登入帳號；若要刪除帳號請見 <a href="delete-account.html">刪除帳號</a>。</li>
         <li><strong>可能短期保留</strong>：為法律義務、爭議處理、防詐欺或資安調查，可能在必要範圍內短期保留部分稽核／交易相關紀錄；期間結束後刪除或去識別化。</li>
         <li><strong>第三方</strong>：Google／Apple／RevenueCat 等所持資料請依其流程處理；商店訂閱請至 Google Play／App Store 管理。</li>
       </ul>
-      <p>完整說明請見 <a href="privacy.html">隱私政策</a>。</p>
     </section>
   </main>
   <footer>
