@@ -50,7 +50,9 @@
       }
       if (/Android/i.test(ua)) {
         location.replace(play);
+        return;
       }
+      location.replace("links.html");
     })();
   </script>
 </head>
