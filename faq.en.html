@@ -106,6 +106,39 @@
       font-family: "Avenir Next", "Segoe UI", sans-serif;
     }
     footer a { color: var(--accent); }
+    .faq-search {
+      margin-bottom: 1.25rem;
+      font-family: "Avenir Next", "Segoe UI", sans-serif;
+    }
+    .faq-search-label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+    .faq-search-input {
+      width: 100%;
+      padding: 0.65rem 0.85rem;
+      font-size: 1rem;
+      border: 1px solid var(--line);
+      border-radius: 0.65rem;
+      background: #fff;
+      color: var(--ink);
+    }
+    .faq-search-input:focus {
+      outline: 2px solid color-mix(in srgb, var(--accent) 45%, transparent);
+      border-color: var(--accent);
+    }
+    .faq-empty {
+      margin: 0 0 1rem;
+      padding: 0.75rem 1rem;
+      border-radius: 0.65rem;
+      background: color-mix(in srgb, var(--line) 35%, white);
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .faq-item[hidden] { display: none; }
   </style>
 </head>
 <body>
@@ -128,67 +161,103 @@
     </nav>
   </header>
   <main>
+    <div class="faq-search" role="search">
+      <label class="faq-search-label" for="faq-search-input">Search FAQ</label>
+      <input
+        id="faq-search-input"
+        class="faq-search-input"
+        type="search"
+        enterkeyhint="search"
+        autocomplete="off"
+        placeholder="Keywords, e.g. backup, Pro, top-up"
+      />
+    </div>
+    <p id="faq-search-empty" class="faq-empty" hidden>No matching questions. Try different keywords or email support.</p>
+    <div id="faq-list">
 
-    <section>
+    <section class="faq-item">
       <h2>Where is my wardrobe data stored?</h2>
       <p>Photos, categories, outfits, and most settings are <strong>stored primarily on your device</strong>. There is no automatic cloud sync. Sign-in is used for authentication, subscription status, and online features (weather, AI beautify, etc.).</p>
     </section>
 
-    <section>
+    <section class="faq-item">
       <h2>Will I lose data if I change phones or reinstall?</h2>
       <p>Without a backup, local wardrobe data may be lost when you switch devices, delete the app, or clear app data. Use <strong>Export wardrobe backup</strong> in Profile to save a JSON file (including photos), then <strong>Import</strong> on the new device.</p>
     </section>
 
-    <section>
+    <section class="faq-item">
       <h2>How do backup and import work?</h2>
       <p>Export: Profile → Export wardrobe backup, then share or save the JSON file.</p>
 <p>Import: Profile → Import wardrobe backup, choose your JSON; you can merge or replace local data. We recommend exporting your current data before importing.</p>
     </section>
 
-    <section>
+    <section class="faq-item">
       <h2>What is the difference between Free and Pro?</h2>
       <p>The free plan has limits on wardrobe items and saved outfits; extras may be preview-only (locked)—see the in-app subscription page. Pro unlocks higher or unlimited wardrobe/outfit limits and more AI beautify uses per month. Exact plans are shown in the app and the store.</p>
     </section>
 
-    <section>
+    <section class="faq-item">
       <h2>How do AI beautify credits work?</h2>
       <p>One-tap beautify usually costs 1 credit. Your plan includes a monthly allowance; Pro users can buy top-up packs, and unused purchased credits carry over. If beautify fails and the server did not charge, credits are refunded. Wait until subscription sync finishes before beautifying to avoid briefly seeing the wrong quota.</p>
     </section>
 
-    <section>
+    <section class="faq-item">
       <h2>Where can I buy extra AI beautify credits?</h2>
       <p>In the app, open <strong>Profile</strong> (use <strong>Upgrade to Pro</strong> or <strong>Buy credits</strong> on the usage card), or go to <strong>Upgrade to Pro</strong> and scroll to the <strong>AI Beautify Top-Up</strong> section.</p>
 <p>Top-ups are for <strong>Pro members</strong> only (subscribe to Pro first on the free plan). Choose a pack; Apple or Google handles payment. Purchased credits carry over until used and apply after your monthly allowance runs out (monthly credits first, then top-up balance).</p>
     </section>
 
-    <section>
+    <section class="faq-item">
       <h2>Subscribe, cancel, or restore purchases?</h2>
       <p>Subscribe and top-ups are done on the Upgrade to Pro screen; payment is handled by Apple or Google. Cancel in App Store or Google Play subscription settings. After reinstalling, sign in with the <strong>same account</strong> and tap <strong>Restore purchases</strong> to regain Pro.</p>
     </section>
 
-    <section>
+    <section class="faq-item">
       <h2>Google or Apple sign-in fails?</h2>
       <p>Check your network and use the Google/Apple account signed in on the device. The release Android app must be properly signed. If it still fails, email yestora.app@gmail.com with device model, OS version, and sign-in method.</p>
     </section>
 
-    <section>
+    <section class="faq-item">
       <h2>Weather and location</h2>
       <p>Home weather needs location permission or a city you pick in Profile. We use it only for weather and outfit suggestions—not to publish your live location. You can turn off location in system settings and use a manual city instead.</p>
     </section>
 
-    <section>
+    <section class="faq-item">
       <h2>How do I change the app language?</h2>
       <p>Profile → Language: System, Traditional Chinese, Simplified Chinese, or English. Legal pages in the app follow your choice; this FAQ page is also available in all three languages.</p>
     </section>
 
-    <section>
+    <section class="faq-item">
       <h2>Still need help?</h2>
       <p>Copy <strong>Support email</strong> in Profile (yestora.app@gmail.com), or read the <a href="privacy.en.html">Privacy Policy</a> and <a href="terms.en.html">Terms of Service</a>. We handle requests under our Privacy Policy.</p>
     </section>
+    </div>
   </main>
   <footer>
     Developer：Emma Kao (brand / app: Yesterday Wardrobe, Yestora) ·
     Contact：<a href="mailto:yestora.app@gmail.com">yestora.app@gmail.com</a>
   </footer>
+<script>
+(function () {
+  var input = document.getElementById('faq-search-input');
+  var empty = document.getElementById('faq-search-empty');
+  var items = document.querySelectorAll('#faq-list .faq-item');
+  if (!input || !items.length) return;
+  function run() {
+    var raw = (input.value || '').trim().toLowerCase();
+    var terms = raw ? raw.split(/\s+/).filter(Boolean) : [];
+    var visible = 0;
+    items.forEach(function (el) {
+      var text = (el.textContent || '').toLowerCase();
+      var match = terms.length === 0 || terms.every(function (t) { return text.indexOf(t) !== -1; });
+      el.hidden = !match;
+      if (match) visible += 1;
+    });
+    if (empty) empty.hidden = visible > 0 || terms.length === 0;
+  }
+  input.addEventListener('input', run);
+  input.addEventListener('search', run);
+})();
+</script>
 </body>
 </html>
